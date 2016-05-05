@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="XamNativeIoTSuiteDevice.WinPhone.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XamNativeIoTSuiteDevice.WinPhone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Margin="10,0.333,10,0">
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Device Id:" FontSize="18"/>
+        <TextBox x:Name="textDeviceId" Margin="0" TextWrapping="Wrap" Text="" FontSize="18" VerticalAlignment="Stretch"/>
+        <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="HostName" FontSize="18"/>
+        <TextBox x:Name="textHostName" Margin="0" TextWrapping="Wrap" Text="" FontSize="18" VerticalAlignment="Stretch"/>
+        <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="Device Key:" FontSize="18"/>
+        <TextBox x:Name="textDeviceKey" Margin="0" TextWrapping="Wrap" Text="" FontSize="18" VerticalAlignment="Stretch"/>
+        <Button x:Name="buttonConnect" Content="Connect" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock x:Name="textTemperature" TextWrapping="Wrap" Text="Temperature" FontSize="18"/>
+        <Slider x:Name="sliderTemperature" Value="50"/>
+        <TextBlock x:Name="textHumidity" TextWrapping="Wrap" Text="Humidity" FontSize="18"/>
+        <Slider x:Name="sliderHumidity" Value="50"/>
+        <Button x:Name="buttonSend" Content="Send" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+    </StackPanel>
+</Page>

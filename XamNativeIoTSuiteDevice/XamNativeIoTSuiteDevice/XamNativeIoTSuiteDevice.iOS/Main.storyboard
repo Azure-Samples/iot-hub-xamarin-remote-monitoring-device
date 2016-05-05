@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DeviceId:" lineBreakMode="tailTruncation" minimumFontSize="10" id="6" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="38" width="560" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="10" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="67" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="13" firstAttribute="width" constant="560"/>
+                                </constraints>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="15" translatesAutoresizingMaskIntoConstraints="NO" text="Host Name:" misplaced="YES">
+                                <rect key="frame" x="20" y="107" width="560" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="18" firstAttribute="width" constant="560"/>
+                                </constraints>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="20" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="136" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="23" firstAttribute="width" constant="560"/>
+                                </constraints>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Device Key:" lineBreakMode="tailTruncation" minimumFontSize="10" id="25" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="174" width="560" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="28" firstAttribute="width" constant="560"/>
+                                </constraints>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="30" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="203" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="31" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="322" width="560" height="31"/>
+                                <constraints>
+                                    <constraint id="44" firstAttribute="width" constant="560"/>
+                                    <constraint id="45" firstAttribute="height" constant="31"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Temperature:" lineBreakMode="tailTruncation" minimumFontSize="10" id="32" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="293" width="560" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="35" firstAttribute="width" constant="560"/>
+                                </constraints>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="47" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="255" width="560" height="30"/>
+                                <state key="normal" title="Connect to Azure IoT Suite">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="50" firstAttribute="width" constant="560"/>
+                                </constraints>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Humidity" lineBreakMode="tailTruncation" minimumFontSize="10" id="52" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="361" width="560" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="56" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="404" width="560" height="31"/>
+                                <constraints>
+                                    <constraint id="59" firstAttribute="width" constant="560"/>
+                                    <constraint id="60" firstAttribute="height" constant="31"/>
+                                </constraints>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="63" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="466" width="560" height="30"/>
+                                <state key="normal" title="Send Telemetry Data to Azure IoT Suite">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint id="7" firstItem="6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="9" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="6" secondAttribute="trailing" constant="27"/>
+                            <constraint id="11" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="10" secondAttribute="trailing" constant="20"/>
+                            <constraint id="14" firstItem="10" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="16" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="15" secondAttribute="trailing" constant="20"/>
+                            <constraint id="19" firstItem="15" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="21" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="20"/>
+                            <constraint id="24" firstItem="20" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="26" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="25" secondAttribute="trailing" constant="20"/>
+                            <constraint id="29" firstItem="25" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="33" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="32" secondAttribute="trailing" constant="20"/>
+                            <constraint id="36" firstItem="32" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="42" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="31" secondAttribute="trailing" constant="20"/>
+                            <constraint id="46" firstItem="31" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="48" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="47" secondAttribute="trailing" constant="20"/>
+                            <constraint id="51" firstItem="47" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="57" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="56" secondAttribute="trailing" constant="20"/>
+                            <constraint id="61" firstItem="56" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="67" firstItem="15" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="10"/>
+                            <constraint id="68" firstItem="20" firstAttribute="top" secondItem="15" secondAttribute="bottom" constant="8"/>
+                            <constraint id="69" firstItem="25" firstAttribute="top" secondItem="20" secondAttribute="bottom" constant="8"/>
+                            <constraint id="70" firstItem="25" firstAttribute="top" secondItem="20" secondAttribute="bottom" constant="8"/>
+                            <constraint id="71" firstItem="30" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="72" firstItem="30" firstAttribute="top" secondItem="25" secondAttribute="bottom" constant="8"/>
+                            <constraint id="73" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="30" secondAttribute="trailing" constant="20"/>
+                            <constraint id="74" firstItem="47" firstAttribute="top" secondItem="30" secondAttribute="bottom" constant="22"/>
+                            <constraint id="75" firstItem="32" firstAttribute="top" secondItem="47" secondAttribute="bottom" constant="8"/>
+                            <constraint id="76" firstItem="31" firstAttribute="top" secondItem="32" secondAttribute="bottom" constant="8"/>
+                            <constraint id="77" firstItem="52" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="78" firstItem="52" firstAttribute="top" secondItem="31" secondAttribute="bottom" constant="8"/>
+                            <constraint id="79" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="52" secondAttribute="trailing" constant="20"/>
+                            <constraint id="80" firstItem="56" firstAttribute="top" secondItem="52" secondAttribute="bottom" constant="22"/>
+                            <constraint id="81" firstItem="63" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20"/>
+                            <constraint id="82" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="63" secondAttribute="trailing" constant="20"/>
+                            <constraint id="83" firstItem="63" firstAttribute="top" secondItem="56" secondAttribute="bottom" constant="31"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textDeviceId" destination="10" id="name-outlet-10"/>
+                        <outlet property="textHostName" destination="20" id="name-outlet-20"/>
+                        <outlet property="textDeviceKey" destination="30" id="name-outlet-30"/>
+                        <outlet property="textTemperature" destination="32" id="name-outlet-32"/>
+                        <outlet property="sliderTemperature" destination="31" id="name-outlet-31"/>
+                        <outlet property="buttonConnect" destination="47" id="name-outlet-47"/>
+                        <outlet property="textHumidity" destination="52" id="name-outlet-52"/>
+                        <outlet property="sliderHumidity" destination="56" id="name-outlet-56"/>
+                        <outlet property="buttonSend" destination="63" id="name-outlet-63"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
