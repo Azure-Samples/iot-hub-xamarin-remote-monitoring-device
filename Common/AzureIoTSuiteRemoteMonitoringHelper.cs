@@ -320,9 +320,9 @@ namespace AzureIoTSuiteRemoteMonitoringHelper
                     }
                 }, ct);
             }
-            catch
+            catch (Exception e)
             {
-                Debug.WriteLine("Error while trying to connect to IoT Hub");
+                Debug.WriteLine("Error while trying to connect to IoT Hub:" + e.Message.ToString());
                 deviceClient = null;
                 return false;
             }
