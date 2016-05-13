@@ -4,7 +4,7 @@ platforms: csharp, xamarin
 author: olivierbloch
 ---
 
-# iot-hub-xamarin-remote-monitoring-device
+# Connect iOS, Android and Windows devices to Azure IoT Suite Remote Monitoring using Xamarin
 This sample shows how to run and connect a Xamarin mobile application to an Azure IoT Suite Remote Monitoring Preconfigured Solution.
 This sample is usefull to try or demonstrate Azure IoT Suite using a mobile device (Android, iOS, Windows).
 Here are some links to learn more on [Azure IoT Suite](https://azure.microsoft.com/en-us/documentation/suites/iot-suite/) and [Azure IoT Suite preconfigured solutions](https://azure.microsoft.com/en-us/documentation/articles/iot-suite-what-are-preconfigured-solutions/).
