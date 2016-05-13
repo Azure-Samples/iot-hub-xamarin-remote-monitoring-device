@@ -20,41 +20,46 @@ You can build and run the samples on a Windows machine or on a Mac.
 
 #### Developing on Windows 
 On Windows you will be able to build and run the samples on the following platforms:
-   - Android (Xamarin native and Xamarin Forms samples)
-   - iOS ( (Xamarin native and Xamarin Forms samples) (note that you will need a Mac with the dev tools installed next to your Windows dev machine to compile and run the sample for iOS)
-   - Windows 10 (Xamarin Forms)
-   - Windows 10 mobile (Xamarin Forms)
-   - Windows 8.1 (Xamarin Forms sample)
-   - Windows Phone 8.1 (Xamarin native and Xamarin Forms samples)
+
+- Android (Xamarin native and Xamarin Forms samples)
+- iOS ( (Xamarin native and Xamarin Forms samples) (note that you will need a Mac with the dev tools installed next to your Windows dev machine to compile and run the sample for iOS)
+- Windows 10 (Xamarin Forms)
+- Windows 10 mobile (Xamarin Forms)
+- Windows 8.1 (Xamarin Forms sample)
+- Windows Phone 8.1 (Xamarin native and Xamarin Forms samples)
 
 Requirements:
-   - A PC running Windows 10 (this would be your development machine).
-   - [Visual Studio 2015 Update 2](https://www.visualstudio.com/) making sur you checked the **Cross Platform Mobile Development | C#/.Net (Xamarin)** option during install
-   - [Optional] [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk) if you want to build and run the UWP project.
-   - [optional] A Mac machine with the development tools installed for Xamarin (see below for the tools requirements).
-   - [optional] A mobile device running one of the following: iOS, Android, Windows 10, Windows 10 mobile, Windows 8.1, Windows Phone 8.1 if you want to deploy the application on a real device. Otherwise you can use emulators and simulators that come along with Xamarin and related tools.
-   - [optional] [Xamarin Android Player](https://www.xamarin.com/android-player). This one is a great Android emulator for development. 
+
+- A PC running Windows 10 (this would be your development machine).
+- [Visual Studio 2015 Update 2](https://www.visualstudio.com/) making sur you checked the **Cross Platform Mobile Development | C#/.Net (Xamarin)** option during install
+- [Optional] [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk) if you want to build and run the UWP project.
+- [optional] A Mac machine with the development tools installed for Xamarin (see below for the tools requirements).
+- [optional] A mobile device running one of the following: iOS, Android, Windows 10, Windows 10 mobile, Windows 8.1, Windows Phone 8.1 if you want to deploy the application on a real device. Otherwise you can use emulators and simulators that come along with Xamarin and related tools.
+- [optional] [Xamarin Android Player](https://www.xamarin.com/android-player). This one is a great Android emulator for development. 
 
 To target Windows 10, you will need to setup your OS to developer mode:
-   - On Windows 10 PC:
-      1. Click on the Windows Icon, 
-      1. Type `For Developers Settings` and press enter.
-      1. In the **Developers Settings** section, select the option **Developer Mode**
-   - On Windows 10 Mobile (if you plan to deploy to a phone running Windows 10 mobile)
-      1. Touch the search button
-      1. Type `Settings` and touch the **Settings** icon to enter the settings panel
-      1. Scroll down to **Update & Security**, then Developers and select the **Developer mode** option
+
+- On Windows 10 PC:
+    1. Click on the Windows Icon, 
+    1. Type `For Developers Settings` and press enter.
+    1. In the **Developers Settings** section, select the option **Developer Mode**
+- On Windows 10 Mobile (if you plan to deploy to a phone running Windows 10 mobile)
+    1. Touch the search button
+    1. Type `Settings` and touch the **Settings** icon to enter the settings panel
+    1. Scroll down to **Update & Security**, then Developers and select the **Developer mode** option
       
 #### Developing on a Mac
 On Mac you will be able to build and run the samples on the following platforms:
-   - Android (Xamarin native and Xamarin Forms samples)
-   - iOS ( (Xamarin native and Xamarin Forms samples)
+
+- Android (Xamarin native and Xamarin Forms samples)
+- iOS ( (Xamarin native and Xamarin Forms samples)
 
 Requirements:
-   - A Mac running OSx 10.10.5+ or 10.11
-   - XCode 7.1
-   - [Xamarin Studio](https://www.xamarin.com/download)
-   - [optional] [Xamarin Android Player](https://www.xamarin.com/android-player). This one is a great Android emulator for development. 
+
+- A Mac running OSx 10.10.5+ or 10.11
+- XCode 7.1
+- [Xamarin Studio](https://www.xamarin.com/download)
+- [optional] [Xamarin Android Player](https://www.xamarin.com/android-player). This one is a great Android emulator for development. 
 
 To build and deploy to iOS device you will need to have an Apple Developer account.
 
@@ -66,12 +71,12 @@ This [article](https://azure.microsoft.com/en-us/documentation/articles/iot-suit
 Once you have an Azure subscription, browse to [http://www.azureiotsuite.com](http://www.azureiotsuite.com)
 Once logged in using your Azure subscription credentials:
 
-   1. Click on **Create a new solution**.
-   1. Select **Remote Monitoring**
-   1. Enter a solution name
-   1. Select a region for your solution to be hosted in
-   1. Select your subscription (if you have several subscription for the account your logged in with)
-   1. Click on **Create solution** at the bottom
+1. Click on **Create a new solution**.
+1. Select **Remote Monitoring**
+1. Enter a solution name
+1. Select a region for your solution to be hosted in
+1. Select your subscription (if you have several subscription for the account your logged in with)
+1. Click on **Create solution** at the bottom
 
 It will take several minutes to deploy all the services of the solution, in the meantime, you can get device application ready.
 
@@ -79,10 +84,9 @@ It will take several minutes to deploy all the services of the solution, in the 
 
 In order to run the device application on your PC, here are the few steps:
 
-   1. Clone or download the github repository (see links on top)
-   1. For the Xamarin Native sample, open the solution XamNativeIoTSuiteDevice\XamNativeIoTSuiteDevice.sln in Visual Studio (for Windows) or Xamarin Studio (for Mac), build, run.
-   1. For the Xamarin Forms sample, open the solution XamFormsIoTSuiteDevice\XamFormsIoTSuiteDevice.sln in Visual Studio (for Windows) or Xamarin Studio (for Mac), build, run.
-
+1. Clone or download the github repository (see links on top)
+1. For the Xamarin Native sample, open the solution XamNativeIoTSuiteDevice\XamNativeIoTSuiteDevice.sln in Visual Studio (for Windows) or Xamarin Studio (for Mac), build, run.
+1. For the Xamarin Forms sample, open the solution XamFormsIoTSuiteDevice\XamFormsIoTSuiteDevice.sln in Visual Studio (for Windows) or Xamarin Studio (for Mac), build, run.
 
 ## Create a device ID for your mobile device application in Azure IoT Suite Remote Monitoring preconfigured solution
 
@@ -102,16 +106,16 @@ Once you have created a new device ID, copy the Device ID, Host Name and Device 
 
 The device application is dead simple.
 
-   1. Connecting to IoT Suite:
-      - Enter the credentials generated in previous steps in the corresponding fields of the app.
-      - Press the "Press to Connect To IoT Suite" button.
-      - At this point you should see the device metadata appear in the IoT Suite dashboard under the **devices** tab.
-   1. Sending telemetry data
-      - Press the **Press to send data to IoT Suite** button.
-      - Data will start showing up in the IoT Suite dashboard. You can play with the sliders to change the values
-   1. Receiving messages from IoT Suite on the device
-      - In the IoT Suite dashboard, go to the **Devices** tab
-      - Select your device
-      - In the right menu, press on **Commands**
-      - In the Commands combo, select the command you want to send to the device, type your text and press **send**
-      - The device should display the message.
+1. Connecting to IoT Suite:
+    - Enter the credentials generated in previous steps in the corresponding fields of the app.
+    - Press the "Press to Connect To IoT Suite" button.
+    - At this point you should see the device metadata appear in the IoT Suite dashboard under the **devices** tab.
+1. Sending telemetry data
+    - Press the **Press to send data to IoT Suite** button.
+    - Data will start showing up in the IoT Suite dashboard. You can play with the sliders to change the values
+1. Receiving messages from IoT Suite on the device
+    - In the IoT Suite dashboard, go to the **Devices** tab
+    - Select your device
+    - In the right menu, press on **Commands**
+    - In the Commands combo, select the command you want to send to the device, type your text and press **send**
+    - The device should display the message.
