@@ -73,11 +73,25 @@ namespace AzureIoTSuiteRemoteMonitoringHelper
     public class Command
     {
         [DataMember]
-        internal string Name;
+        public string Name { get; set; }
 
         [DataMember]
-        internal CommandParameter[] Parameters;
+        internal Collection<CommandParameter> Parameters = new Collection<CommandParameter>();
     }
+
+    [DataContract]
+    public class ReceivedMessage
+    {
+        [DataMember]
+        public string Name { get; set; }
+        [DataMember]
+        public string MessageId { get; set; }
+        [DataMember]
+        public string CreatedTime { get; set; }
+        [DataMember]
+        public Dictionary<string, object> Parameters { get; set; }
+    }
+
 
     [DataContract]
     public class TelemetryFormat
@@ -99,7 +113,7 @@ namespace AzureIoTSuiteRemoteMonitoringHelper
         public DeviceProperties DeviceProperties { get; set; } = new DeviceProperties();
 
         [DataMember]
-        public Command[] Commands { get; set; }
+        internal Collection<Command> Commands = new Collection<Command>();
 
         [DataMember]
         internal Collection<TelemetryFormat> Telemetry = new Collection<TelemetryFormat>();
@@ -114,6 +128,21 @@ namespace AzureIoTSuiteRemoteMonitoringHelper
         internal string ObjectType = "DeviceInfo";
     }
     #endregion
+
+
+    /// <summary>
+    /// ReceivedMessageEventArgs class
+    /// Class to pass event arguments for new message received from the IoT Suite dashboard
+    /// </summary>
+    public class ReceivedMessageEventArgs : System.EventArgs
+    {
+        public ReceivedMessage Message { get; set; }
+
+        public ReceivedMessageEventArgs(ReceivedMessage message)
+        {
+            Message = message;
+        }
+    }
 
     /// <summary>
     /// RemoteMonitoringDevice class
@@ -135,6 +164,17 @@ namespace AzureIoTSuiteRemoteMonitoringHelper
             {
                 Telemetry.Add(TelemetryItem.Name, DefaultValue);
                 Model.Telemetry.Add(TelemetryItem);
+            }
+        }
+
+        // Collection of commands
+        public Dictionary<string, object> Commands { get; set; } = new Dictionary<string, object>();
+        public void AddCommand(Command CommandItem)
+        {
+            if (!Commands.ContainsKey(CommandItem.Name))
+            {
+                Commands.Add(CommandItem.Name, CommandItem);
+                Model.Commands.Add(CommandItem);
             }
         }
 
@@ -163,27 +203,14 @@ namespace AzureIoTSuiteRemoteMonitoringHelper
         CancellationTokenSource TokenSource = new CancellationTokenSource();
 
         // Event Handler for notifying the reception of a new message from IoT Hub
-        public event EventHandler ReceivedMessage;
+        public event EventHandler onReceivedMessage;
 
-        /// <summary>
-        /// ReceivedMessageEventArgs class
-        /// Class to pass event arguments for new message received from ConnectTheDots dashboard
-        /// </summary>
-        public class ReceivedMessageEventArgs : System.EventArgs
-        {
-            public Command Message { get; set; }
 
-            public ReceivedMessageEventArgs(Command message)
-            {
-                Message = message;
-            }
-        }
-
-        // Trigger for notifying reception of new message from Connect The Dots dashboard
+        // Trigger for notifying reception of new message from IoT Suite dashboard
         protected virtual void OnReceivedMessage(ReceivedMessageEventArgs e)
         {
-            if (ReceivedMessage != null)
-                ReceivedMessage(this, e);
+            if (onReceivedMessage != null)
+                onReceivedMessage(this, e);
         }
 
         /// <summary>
@@ -297,7 +324,17 @@ namespace AzureIoTSuiteRemoteMonitoringHelper
                             try
                             {
                                 // Read message and deserialize
-                                Command command = DeSerialize(message.GetBytes());
+                                dynamic obj = DeSerialize(message.GetBytes());
+
+                                ReceivedMessage command = new ReceivedMessage();
+                                command.Name = obj.Name;
+                                command.MessageId = obj.MessageId;
+                                command.CreatedTime = obj.CreatedTime;
+                                command.Parameters = new Dictionary<string, object>();
+                                foreach (dynamic param in obj.Parameters)
+                                {
+                                    command.Parameters.Add(param.Name, param.Value);
+                                }
 
                                 // Invoke message received callback
                                 OnReceivedMessage(new ReceivedMessageEventArgs(command));
@@ -305,9 +342,10 @@ namespace AzureIoTSuiteRemoteMonitoringHelper
                                 // We received the message, indicate IoTHub we treated it
                                 await deviceClient.CompleteAsync(message);
                             }
-                            catch
+                            catch (Exception e)
                             {
                                 // Something went wrong. Indicate the backend that we coudn't accept the message
+                                Debug.WriteLine("Error while deserializing message received: " + e.Message);
                                 await deviceClient.RejectAsync(message);
                             }
                         }

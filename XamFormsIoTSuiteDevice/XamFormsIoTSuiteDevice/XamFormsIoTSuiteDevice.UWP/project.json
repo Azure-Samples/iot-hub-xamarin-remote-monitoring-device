@@ -1,12 +1,12 @@
 ﻿{
   "dependencies": {
-    "Microsoft.Azure.Devices.Client.PCL": "1.0.6",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
+    "Microsoft.Azure.Devices.Client.PCL": "1.0.8",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0",
     "Newtonsoft.Json": "8.0.3",
     "Xam.Plugin.DeviceInfo": "2.0.2",
     "Xam.Plugin.Geolocator": "4.0.0-beta4",
     "Xam.Plugins.Settings": "2.1.0",
-    "Xamarin.Forms": "2.0.0.6482"
+    "Xamarin.Forms": "2.2.0.31"
   },
   "frameworks": {
     "uap10.0": {}

@@ -10,7 +10,8 @@ using Plugin.DeviceInfo;
 using Plugin.Geolocator;
 using System.Threading.Tasks;
 using System.Diagnostics;
-
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
 
 namespace XamFormsIoTSuiteDevice
 {
@@ -94,6 +95,10 @@ namespace XamFormsIoTSuiteDevice
             Device.AddTelemetry(new TelemetryFormat { Name = "Temperature", DisplayName = "Temp (C)", Type = "Double" }, (double)0);
             Device.AddTelemetry(new TelemetryFormat { Name = "Humidity", DisplayName = "Hmdt (%)", Type = "Double" }, (double)0);
 
+            // Add a command
+            Device.AddCommand(new AzureIoTSuiteRemoteMonitoringHelper.Command { Name = "TriggerAlarm", Parameters = new Collection<CommandParameter> { new CommandParameter { Name = "Message", Type = "String" } } });
+            Device.onReceivedMessage += Device_ReceivedMessage;
+            
             // If you are developing and want to avoid having to enter the full connection string on the device,
             // you can temporarily hard code it here. Comment this when done!
             //Device.DeviceId = "[DeviceId]";
@@ -167,6 +172,21 @@ namespace XamFormsIoTSuiteDevice
                     }
                 }
             };
+        }
+
+
+        private void Device_ReceivedMessage(object sender, EventArgs e)
+        {
+            if (((ReceivedMessageEventArgs)e).Message.Parameters.ContainsKey("Message"))
+            {
+                string AlertText = ((ReceivedMessageEventArgs)e).Message.Parameters["Message"].ToString();
+                if (AlertText != "")
+                {
+                    Xamarin.Forms.Device.BeginInvokeOnMainThread(() => {
+                        App.Current.MainPage.DisplayAlert("Message From Azure IoT Suite", AlertText, "Ok");
+                    });
+                }
+            }
         }
 
         private bool CheckConfig()
