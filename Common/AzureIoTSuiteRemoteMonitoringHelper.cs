@@ -1,5 +1,6 @@
 ﻿using Microsoft.Azure.Devices.Client;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -226,10 +227,10 @@ namespace AzureIoTSuiteRemoteMonitoringHelper
         /// <summary>
         /// DeSerialize message
         /// </summary>
-        private dynamic DeSerialize(byte[] data)
+        private JObject DeSerialize(byte[] data)
         {
             string text = Encoding.UTF8.GetString(data, 0, data.Length);
-            return JsonConvert.DeserializeObject(text);
+            return JObject.Parse(text);
         }
 
         /// <summary>
@@ -324,14 +325,14 @@ namespace AzureIoTSuiteRemoteMonitoringHelper
                             try
                             {
                                 // Read message and deserialize
-                                dynamic obj = DeSerialize(message.GetBytes());
+                                var obj = DeSerialize(message.GetBytes());
 
                                 ReceivedMessage command = new ReceivedMessage();
-                                command.Name = obj.Name;
-                                command.MessageId = obj.MessageId;
-                                command.CreatedTime = obj.CreatedTime;
+                                command.Name = obj["Name"].ToString();
+                                command.MessageId = obj["MessageId"].ToString();
+                                command.CreatedTime = obj["CreatedTime"].ToString();
                                 command.Parameters = new Dictionary<string, object>();
-                                foreach (dynamic param in obj.Parameters)
+                                foreach (dynamic param in obj["Parameters"])
                                 {
                                     command.Parameters.Add(param.Name, param.Value);
                                 }
