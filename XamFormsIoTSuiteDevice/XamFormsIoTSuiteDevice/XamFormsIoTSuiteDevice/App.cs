@@ -92,8 +92,8 @@ namespace XamFormsIoTSuiteDevice
             Device.HostName = Settings.HostName;
             Device.DeviceKey = Settings.DeviceKey;
             // Add the telemetry data
-            Device.AddTelemetry(new TelemetryFormat { Name = "Temperature", DisplayName = "Temp (C)", Type = "Double" }, (double)0);
-            Device.AddTelemetry(new TelemetryFormat { Name = "Humidity", DisplayName = "Hmdt (%)", Type = "Double" }, (double)0);
+            Device.AddTelemetry(new TelemetryFormat { Name = "Temperature", DisplayName = "Temperature (C)", Type = "double" }, (double)0);
+            Device.AddTelemetry(new TelemetryFormat { Name = "Humidity", DisplayName = "Humidity (%)", Type = "double" }, (double)0);
 
             // Add a command
             Device.AddCommand(new AzureIoTSuiteRemoteMonitoringHelper.Command { Name = "TriggerAlarm", Parameters = new Collection<CommandParameter> { new CommandParameter { Name = "Message", Type = "String" } } });
