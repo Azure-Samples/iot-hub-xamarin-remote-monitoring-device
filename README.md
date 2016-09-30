@@ -6,7 +6,7 @@ author: olivierbloch
 
 # Connect iOS, Android and Windows devices to Azure IoT Suite Remote Monitoring using Xamarin
 This sample shows how to run and connect a Xamarin mobile application to an Azure IoT Suite Remote Monitoring Preconfigured Solution.
-This sample is usefull to try or demonstrate Azure IoT Suite using a mobile device (Android, iOS, Windows).
+This sample is useful to demonstrate the Azure IoT Suite using a mobile device (Android, iOS, Windows).
 Here are some links to learn more on [Azure IoT Suite](https://azure.microsoft.com/en-us/documentation/suites/iot-suite/) and [Azure IoT Suite preconfigured solutions](https://azure.microsoft.com/en-us/documentation/articles/iot-suite-what-are-preconfigured-solutions/).
 
 ## Running this sample
@@ -22,7 +22,7 @@ You can build and run the samples on a Windows machine or on a Mac.
 On Windows you will be able to build and run the samples on the following platforms:
 
 - Android (Xamarin native and Xamarin Forms samples)
-- iOS ( (Xamarin native and Xamarin Forms samples) (note that you will need a Mac with the dev tools installed next to your Windows dev machine to compile and run the sample for iOS)
+- iOS (Xamarin native and Xamarin Forms samples) (note that you will need a Mac with the dev tools installed next to your Windows dev machine to compile and run the sample for iOS)
 - Windows 10 (Xamarin Forms)
 - Windows 10 mobile (Xamarin Forms)
 - Windows 8.1 (Xamarin Forms sample)
@@ -32,7 +32,7 @@ Requirements:
 
 - A PC running Windows 10 (this would be your development machine).
 - [Visual Studio 2015 Update 2](https://www.visualstudio.com/) making sur you checked the **Cross Platform Mobile Development | C#/.Net (Xamarin)** option during install
-- [Optional] [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk) if you want to build and run the UWP project.
+- [optional] [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk) if you want to build and run the UWP project.
 - [optional] A Mac machine with the development tools installed for Xamarin (see below for the tools requirements).
 - [optional] A mobile device running one of the following: iOS, Android, Windows 10, Windows 10 mobile, Windows 8.1, Windows Phone 8.1 if you want to deploy the application on a real device. Otherwise you can use emulators and simulators that come along with Xamarin and related tools.
 - [optional] [Xamarin Android Player](https://www.xamarin.com/android-player). This one is a great Android emulator for development. 
@@ -66,7 +66,7 @@ To build and deploy to iOS device you will need to have an Apple Developer accou
 
 ## Deploy an Azure IoT Suite Remote Monitoring preconfigured solution
 
-In order to deploy an Azure IoT Suite precongigured solution, you need an Azure subscription. If you don't have one, you can easily create a [free trial subscription](https://azure.microsoft.com/en-us/free/).
+In order to deploy an Azure IoT Suite preconfigured solution, you need an Azure subscription. If you don't have one, you can easily create a [free trial subscription](https://azure.microsoft.com/en-us/free/).
 This [article](https://azure.microsoft.com/en-us/documentation/articles/iot-suite-getstarted-preconfigured-solutions/) describes in details how to get started with Azure IoT Suite Remote Monitoring preconfigured solutions, but if you want the short version, see below.
 Once you have an Azure subscription, browse to [http://www.azureiotsuite.com](http://www.azureiotsuite.com)
 Once logged in using your Azure subscription credentials:
@@ -75,10 +75,10 @@ Once logged in using your Azure subscription credentials:
 1. Select **Remote Monitoring**
 1. Enter a solution name
 1. Select a region for your solution to be hosted in
-1. Select your subscription (if you have several subscription for the account your logged in with)
+1. Select your subscription (if you have several subscriptions for the account you're logged in with)
 1. Click on **Create solution** at the bottom
 
-It will take several minutes to deploy all the services of the solution, in the meantime, you can get device application ready.
+It will take several minutes to deploy all the services of the solution, in the meantime, you can get the device application ready.
 
 ## Run the device application on Windows 10 PC and mobile
 
@@ -95,7 +95,11 @@ At this point the Remote Monitoring solution should be deployed (if not, go get 
 ![](https://raw.githubusercontent.com/Azure-Samples/iot-hub-dotnet-uwp-remote-monitoring/master/Media/IoTSuiteSolution.PNG)
 
 ```
-Important: we are not using the simulated devices that are automatically deployed as part of the remote monitoring solution. It is recommended to deactivate all the simulated devices from the Devices tab in the dashboard to prevent unecessary traffic and cost to the Azure subscription.
+Important: we are not using the simulated devices that are automatically deployed as 
+part of the remote monitoring solution. 
+
+It is recommended to deactivate all the simulated devices from the Devices tab in 
+the dashboard to prevent unecessary traffic and cost to the Azure subscription.
 ```
 
 In order to connect your mobile application to your Azure IoT Suite instance (which by now should be deployed), you will need to create a unique ID for it in the Suite dashboard.
